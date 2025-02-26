@@ -112,7 +112,7 @@ import axios from "axios";
 let data = ref([]);
 const getData = async () => {
   const res = await axios.get(
-    "http://nexifytw.mynetgear.com:45000/api/Record/GetRecords"
+    "/api/Record/GetRecords"
   );
   data.value = res.data.Data;
   console.log("data:", data);
@@ -130,7 +130,7 @@ const addRow = () => {
 
 const saveData = async () => {
   const res = await axios.post(
-    "http://nexifytw.mynetgear.com:45000/api/Record/SaveRecords",
+    "/api/Record/SaveRecords",
     data.value
   );
   console.log("saveData:", res);
