@@ -61,7 +61,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://nexifytw.mynetgear.com:45000/',
+        target: 'http://nexifytw.mynetgear.com:45000',
         secure: false, // 避免 HTTPS 強制要求
       }
     }
