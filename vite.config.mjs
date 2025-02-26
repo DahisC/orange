@@ -58,4 +58,13 @@ export default defineConfig({
       },
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://nexifytw.mynetgear.com:45000',
+        changeOrigin: true,
+        secure: false, // 避免 HTTPS 強制要求
+      }
+    }
+  }
 })
